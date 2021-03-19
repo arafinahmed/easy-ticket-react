@@ -10,6 +10,7 @@ import { createContext, useState } from 'react';
 import Destination from './components/Destination/Destination';
 import LoginPage from './components/LoginPage/LoginPage';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
 export const ContextApi = createContext();
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <ContextApi.Provider value={[transportType, setTransportType, loggedInUser, setLoggedInUser]}>
       <Router>
         <Head></Head>
-
+        
         <Switch>
           <Route exact path="/">
             <Home></Home>

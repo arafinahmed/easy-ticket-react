@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { ContextApi } from '../../App';
 import DestinationForm from '../DestinationForm/DestinationForm';
-import map from '../../images/Map.png';
 import './Destination.css';
 import ShowDestination from '../ShowDestination/ShowDestination';
+import GoogleMap from '../GoogleMap/GoogleMap';
 const Destination = () => {
     const [transportType] = useContext(ContextApi);
     const [pickFrom, setPickFrom] = useState("");
@@ -18,7 +18,7 @@ const Destination = () => {
                     }
                 </div>
                 <div className="image-container">
-                    <img src={map} alt="" />
+                    <GoogleMap></GoogleMap>
                 </div>
             </div>
         </div>
