@@ -8,15 +8,13 @@ const Head = () => {
             <Navbar.Brand><Link to="/">Easy Ticket</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    
+                <Nav className="mr-auto">                    
                 </Nav>
                 <Nav>
                     <Nav.Link><Link to="/">Home</Link></Nav.Link>
                     <Nav.Link><Link to="/destination">Destination</Link></Nav.Link>
                     <Nav.Link><Link to="/blog">Blog</Link></Nav.Link>
-                    <Nav.Link><Link to="/contact">Contact</Link></Nav.Link>
-                    
+                    <Nav.Link><Link to="/contact">Contact</Link></Nav.Link>                    
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
