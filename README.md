@@ -17,3 +17,16 @@
 #### Google map also added in this project. 
 
 #### This project is deployed to firebase. 
+
+### The components of this projects are 
+#### Head
+#### Home
+#### LoginPage
+#### Private Route
+#### Destination
+#### ShowDestination
+#### GoogleMap
+#### NotFound
+#### ShowFare
+#### DestinationForm
+#### ShowDestination
