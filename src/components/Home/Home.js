@@ -5,14 +5,13 @@ import {useHistory } from 'react-router-dom';
 import { ContextApi } from '../../App';
 const Home = () => {
     const history = useHistory();
-    const [transportType, setTransportType] = useContext(ContextApi);
-    const HandleClick = () => {
+    const setTransportType = useContext(ContextApi)[1];
+    const HandleClick = (transport) => {
         history.push("/destination");
-        setTransportType()
+        setTransportType(transport);
     }
     return (
-        <div>
-            <h2>{transportType}</h2>
+        <div className="transportTypeContainer container">
             <section className="transport" onClick={ () => HandleClick("bike")}>
                 <h1><MotorcycleIcon fontSize="inherit"/></h1>
                 <h3>Bike</h3>

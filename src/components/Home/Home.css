@@ -1,11 +1,17 @@
 .transport h1{
-    font-size: 200px;
+    font-size: 150px;
+    
 }
 .transport{
     text-align: center;
     color: black;
+    border: 1px solid purple;
+    border-radius: 1.7em;
+    margin: .5em;
 }
 
-Link:hover h3{
-    text-decoration: none;
+.transportTypeContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 }

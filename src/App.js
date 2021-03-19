@@ -7,18 +7,26 @@ import {
 import Head from './components/Head/Head';
 import Home from './components/Home/Home';
 import { createContext, useState } from 'react';
+import Destination from './components/Destination/Destination';
+import LoginPage from './components/LoginPage/LoginPage';
 export const ContextApi = createContext();
 
 function App() {
   const [transportType, setTransportType] = useState("");
   return (
-    <ContextApi.Provider value={[[transportType, setTransportType]]}>
+    <ContextApi.Provider value={[transportType, setTransportType]}>
       <Router>
         <Head></Head>
 
         <Switch>
           <Route exact path="/">
             <Home></Home>
+          </Route>
+          <Route path="/destination">
+            <Destination></Destination>
+          </Route>
+          <Route path="/login">
+            <LoginPage></LoginPage>
           </Route>
         </Switch>
       </Router>
