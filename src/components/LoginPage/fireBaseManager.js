@@ -24,10 +24,12 @@ if (!firebase.apps.length) {
 
  // sign up with email and password
 
- export const createUserWithEmailAndPassword = (email, password) => {
+ export const createUserWithEmailAndPassword = (name, email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => { 
       let user = userCredential.user;
+      console.log(name);
+      updateUserName(name);
       return user;
     })
     .catch((error) => {
@@ -36,4 +38,30 @@ if (!firebase.apps.length) {
       return {};
       // ..
     });
+ }
+
+ export const signInWithEmailAndPassword = (email, password) => {
+   return firebase.auth().signInWithEmailAndPassword(email, password)
+   .then((userCredential) => {
+     // Signed in
+     var user = userCredential.user;
+     return user;
+   })
+   .catch((error) => {
+   //   var errorCode = error.code;
+   //   var errorMessage = error.message;
+   return {};
+   });
+ }
+
+//update user name in firebase
+ const updateUserName = (name) => {
+   console.log(name);
+   firebase.auth().currentUser.updateProfile({
+     displayName: name
+   }).then(function () {
+     console.log("Updated display name");
+   }).catch(function (error) {
+     console.log(error);
+   });
  }
