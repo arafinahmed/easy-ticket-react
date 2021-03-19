@@ -7,7 +7,6 @@ const DestinationForm = ({setPickFrom, setPickTo}) => {
         setPickFrom(e.target.pickFrom.value);
         setPickTo(e.target.pickTo.value);
         e.preventDefault();
-
     }
     return (
         <>

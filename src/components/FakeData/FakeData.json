@@ -1,0 +1,79 @@
+[{
+    "type": "bike",
+    "name": "Bike",
+    "seats": "1",
+    "fare": "30"
+  },
+  {
+    "type": "bike",
+    "name": "Bike",
+    "seats": "1",
+    "fare": "31"
+  },
+  {
+    "type": "bike",
+    "name": "Bike",
+    "seats": "1",
+    "fare": "32"
+  },
+  {
+    "type": "bike",
+    "name": "Bike",
+    "seats": "1",
+    "fare": "33"
+  },
+  {
+    "type": "car",
+    "name": "Car",
+    "seats": "4",
+    "fare": "98"
+  },
+  {
+    "type": "car",
+    "name": "Car",
+    "seats": "4",
+    "fare": "99"
+  },
+  {
+    "type": "car",
+    "name": "Car",
+    "seats": "4",
+    "fare": "100"
+  },
+  {
+    "type": "bus",
+    "name": "Bus",
+    "seats": "10",
+    "fare": "200"
+  },
+  {
+    "type": "bus",
+    "name": "Bus",
+    "seats": "10",
+    "fare": "200"
+  },
+  {
+    "type": "bus",
+    "name": "Bus",
+    "seats": "10",
+    "fare": "200"
+  },
+  {
+    "type": "train",
+    "name": "Train",
+    "seats": "30",
+    "fare": "230"
+  },
+  {
+    "type": "train",
+    "name": "Train",
+    "seats": "30",
+    "fare": "230"
+  },
+  {
+    "type": "train",
+    "name": "Train",
+    "seats": "30",
+    "fare": "230"
+  }
+]
