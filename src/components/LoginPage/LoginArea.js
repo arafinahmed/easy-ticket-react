@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 const LoginArea = ({ updateLoginInfo }) => {
   const [emailNotValid, setEmailNotValid] = useState(false);
   const [passwordNotValid, setPasswordNotValid] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     const email = e.target.email.value;
@@ -15,8 +16,13 @@ const LoginArea = ({ updateLoginInfo }) => {
     if(!emailNotValid && !passwordNotValid){
       signInWithEmailAndPassword(email, password)
       .then(res => {
-        console.log(res);
-        updateLoginInfo(res, true);
+        if(res.errorMessage){
+          setErrorMessage(res.errorMessage);
+        }
+        else{
+          setErrorMessage("");
+          updateLoginInfo(res, true);
+        }
       })
     }
     e.preventDefault();
@@ -38,6 +44,10 @@ const LoginArea = ({ updateLoginInfo }) => {
         
         {
           passwordNotValid && <> <small style={{ color: "red" }}>Password length must be greater than 6 and contains digit</small></>
+
+        }
+        {
+          errorMessage && <> <small style={{ color: "red" }}>{errorMessage}</small></>
 
         }
         <br/>

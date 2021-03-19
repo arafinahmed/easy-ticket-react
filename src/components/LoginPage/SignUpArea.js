@@ -6,6 +6,7 @@ const SignUpArea = ({ updateLoginInfo }) => {
     const [emailNotValid, setEmailNotValid] = useState(false);
     const [passwordNotValid, setPasswordNotValid] = useState(false);
     const [passwordNotMatch, setPasswordNotMatch] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
 
 
@@ -27,8 +28,13 @@ const SignUpArea = ({ updateLoginInfo }) => {
         if(!emailNotValid && !passwordNotMatch && !passwordNotValid){
             createUserWithEmailAndPassword(name, email, password)
             .then(res => {
-                console.log(res);
-                updateLoginInfo(res, true);
+                if(res.errorMessage){
+                    setErrorMessage(res.errorMessage);
+                  }
+                  else{
+                    setErrorMessage("");
+                    updateLoginInfo(res, true);
+                  }
             })
         }
 
@@ -59,6 +65,10 @@ const SignUpArea = ({ updateLoginInfo }) => {
                     }
                     {
                         !passwordNotValid && passwordNotMatch && <> <small style={{ color: "red" }}>Password not match</small> <br /></>
+                    }
+                    {
+                        errorMessage && <> <small style={{ color: "red" }}>{errorMessage}</small><br /></>
+
                     }
                     <Button className="form-control" type="submit">Signup</Button>
 
