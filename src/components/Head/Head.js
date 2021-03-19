@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
+import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 
 import { Link } from 'react-router-dom';
@@ -29,15 +30,12 @@ const Head = () => {
                     {
                         loggedInUser.email ?
                             <Nav.Link><Link to="/">
-                                <button onClick={() => {setLoggedInUser({})}} className=".login-logout-btn">
-                                    Logout
-                            </button>
+                                
+                            <Button onClick={() => {setLoggedInUser({})}}  variant="danger">Logout</Button>
                             </Link></Nav.Link>
                             :
                             <Nav.Link><Link to="/login">
-                                <button className=".login-logout-btn">
-                                    Login
-                            </button>
+                                <Button variant="primary">Login</Button>
                             </Link></Nav.Link>
                     }
                     
