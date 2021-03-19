@@ -13,7 +13,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 export const ContextApi = createContext();
 
 function App() {
-  const [transportType, setTransportType] = useState("");
+  const [transportType, setTransportType] = useState("bike");
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <ContextApi.Provider value={[transportType, setTransportType, loggedInUser, setLoggedInUser]}>

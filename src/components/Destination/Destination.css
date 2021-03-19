@@ -1,4 +1,29 @@
 .destination-container{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 4fr 6fr;
+    column-gap: 2em;
+}
+.main-destination-container{
+    margin-top: 20px;
+    height: 90vh;
+    
+}
+.image-container img{
+    width: 100%;
+}
+@media only screen and (max-width: 992px) {
+    
+    .destination-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    
+    .destination-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 2em;
+    }
 }

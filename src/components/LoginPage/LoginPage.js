@@ -37,6 +37,8 @@ const LoginPage = () => {
     }
     return (
         <div>
+            <br/>
+
             {
                 isNewUser ? <SignUpArea updateLoginInfo={updateLoginInfo} key="SignUpArea"></SignUpArea> : <LoginArea updateLoginInfo={updateLoginInfo} key="LoginArea"></LoginArea>
             }

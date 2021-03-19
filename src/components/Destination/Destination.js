@@ -9,7 +9,7 @@ const Destination = () => {
     const [pickFrom, setPickFrom] = useState("");
     const [pickTo, setPickTo] = useState("");
     return (
-        <div className="container">
+        <div className="container main-destination-container">
             <div className="destination-container">
                 <div>
                     {
@@ -17,8 +17,8 @@ const Destination = () => {
                             <DestinationForm key="destinationForm" setPickFrom={setPickFrom} setPickTo={setPickTo}></DestinationForm>
                     }
                 </div>
-                <div>
-                    <img className="img-fluid" src={map} alt="" />
+                <div className="image-container">
+                    <img src={map} alt="" />
                 </div>
             </div>
         </div>

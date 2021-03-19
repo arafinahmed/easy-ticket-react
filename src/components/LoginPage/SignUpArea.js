@@ -24,11 +24,13 @@ const SignUpArea = ({ updateLoginInfo }) => {
             setPasswordNotMatch(false);
         }
         console.log(name, email, password, password2);
-        createUserWithEmailAndPassword(name, email, password)
+        if(!emailNotValid && !passwordNotMatch && !passwordNotValid){
+            createUserWithEmailAndPassword(name, email, password)
             .then(res => {
                 console.log(res);
                 updateLoginInfo(res, true);
             })
+        }
 
         e.preventDefault();
 
