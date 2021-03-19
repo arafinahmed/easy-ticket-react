@@ -9,6 +9,7 @@ if (!firebase.apps.length) {
     firebase.app(); 
  }
 
+ // log in with google 
  export const fireBaseLoginWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth()
@@ -19,4 +20,20 @@ if (!firebase.apps.length) {
         }).catch((error) => {
             return {};
         });
+ }
+
+ // sign up with email and password
+
+ export const createUserWithEmailAndPassword = (email, password) => {
+    return firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => { 
+      let user = userCredential.user;
+      return user;
+    })
+    .catch((error) => {
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+      return {};
+      // ..
+    });
  }

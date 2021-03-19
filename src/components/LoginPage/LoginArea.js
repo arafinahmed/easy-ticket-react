@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 
 const LoginArea = () => {
     const handleSubmit = (e) => {
-        
-          
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+        e.preventDefault();          
     }
 
     const handleChange = (e) => {
@@ -21,11 +23,10 @@ const LoginArea = () => {
     return (
         <div>
                   
-      <form onSubmit={handleSubmit}>
-        
-        <input type="text" onBlur={handleChange} name="email" placeholder="Your Email" required />
+      <form onSubmit={handleSubmit}>        
+        <input type="text" name="email" placeholder="Your Email" required />
         <br />
-        <input onBlur={handleChange} type="password" name="password" id="" placeholder="Your password" required />
+        <input type="password" name="password" id="" placeholder="Your password" required />
         <br />
         <input type="submit" value="Submit" />
       </form>
