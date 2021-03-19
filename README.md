@@ -9,3 +9,11 @@
 #### 4. `npm i firebase`
 #### 5. `npm i react-google-maps`
 #### 6. `@fortawesome/react-fontawesome`
+
+#### This is an assignment project from programming hero. In this project our main target to react router and private react router. We have also added firebase authentication in this project. 
+#### Create new user with email and password is implemented in this project. 
+#### We can also sign in by our google and our own created account.
+
+#### Google map also added in this project. 
+
+#### This project is deployed to firebase. 
