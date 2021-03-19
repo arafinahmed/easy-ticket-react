@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import Navbar from 'react-bootstrap/Navbar'
-import Button from 'react-bootstrap/Button'
-import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
 
 import { Link } from 'react-router-dom';
 
