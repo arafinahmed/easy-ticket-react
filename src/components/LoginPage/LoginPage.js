@@ -1,5 +1,6 @@
 import React from 'react';
 import { fireBaseLoginWithGoogle } from './fireBaseManager';
+import LoginArea from './LoginArea';
 
 
 const LoginPage = () => {
@@ -10,6 +11,7 @@ const LoginPage = () => {
     }
     return (
         <div>
+            <LoginArea></LoginArea>
             <button onClick={loginWithGoogle}>Login with google</button>
         </div>
     );
