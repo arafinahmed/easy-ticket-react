@@ -5,6 +5,10 @@ import { fireBaseLoginWithGoogle } from './fireBaseManager';
 import LoginArea from './LoginArea';
 import SignUpArea from './SignUpArea';
 import './LoginPage.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGoogle} from '@fortawesome/free-brands-svg-icons'
+
+const element = <FontAwesomeIcon icon={faGoogle} />
 
 
 const LoginPage = () => {
@@ -55,9 +59,9 @@ const LoginPage = () => {
 
             </div>
             <br/>
-            <p className="text-center">------or------</p>
+            <p className="text-center">------------------or------------------</p>
             <div className="d-flex justify-content-center">
-                <button onClick={loginWithGoogle}>Login with google</button>
+                <button className="signup-signin" onClick={loginWithGoogle}>{element} Login with google</button>
             </div>
 
         </div>
