@@ -1,0 +1,17 @@
+[{
+    "type": "Bike",
+    "imgUrl":"https://i.ibb.co/f8d7wc6/4ee909fbde72a4671f3871d88df64854.png"
+  },
+  {
+    "type": "Car",
+    "imgUrl":"https://i.ibb.co/pyhsh8r/car.png"
+  },
+  {
+    "type": "Train",
+    "imgUrl":"https://i.ibb.co/vHCjLmz/train.png"
+  },
+  {
+    "type": "Bus",
+    "imgUrl":"https://i.ibb.co/NTBcfG1/bus.png"
+  }
+]

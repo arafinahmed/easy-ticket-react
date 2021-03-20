@@ -9,6 +9,10 @@
     border-radius: 1.7em;
     margin: .5em;
 }
+.transport img{
+    padding: 2.5em 2.5em .5em 2.5em;
+}
+
 
 .transportTypeContainer{
     display: grid;

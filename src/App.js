@@ -12,6 +12,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
 import TicketConfirmed from './components/TicketConfirmed/TicketConfirmed';
+import BlogContainer from './components/BlogContainer/BlogContainer';
 
 export const ContextApi = createContext();
 
@@ -33,6 +34,9 @@ function App() {
           <PrivateRoute path="/destination">
             <Destination></Destination>
           </PrivateRoute>
+          <Route path="/blog">
+            <BlogContainer></BlogContainer>
+          </Route>
           <PrivateRoute path="/ticketConfirmed">
             <TicketConfirmed></TicketConfirmed>
           </PrivateRoute>
